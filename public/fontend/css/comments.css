@@ -1,0 +1,250 @@
+.ReactModal__Content  {
+    background: red;
+    padding-top: 0px !important;
+    min-height: 522px;
+    border-radius: 5px;
+    top: 60px;
+    padding: 0px;
+}
+
+.ReactModal__Overlay, .ReactModal__Overlay--after-open {
+	z-index: 99999999;
+	padding: 0px !important;
+}
+
+.ReactModal__Overlay--after-open .closeModalComment {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #FFF;
+}
+
+.ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, .9) !important;
+}
+
+.mfp-iframe-scaler {
+    background: #fff;
+    padding-top: 0px !important;
+    min-height: 522px;
+    border-radius: 5px;
+}
+
+h3.title-popup {
+    height: 20px;
+    font-weight: normal;
+}
+
+span.author {
+    color: #365899;
+}
+
+span.message {
+    font-size: 15px;
+    padding-left: 20px;
+    line-height: 22px;
+    height: auto;
+    display: block;
+    text-indent: 0px;
+    text-align: justify;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    clear: left;
+}
+
+.comment-ago {
+    margin-top: 10px;
+}
+
+.comment-item {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    float: left;
+    text-indent: 18px;
+}
+
+.comment-feed {
+    display: block;
+    height: 36px;
+    background: #FFF;
+    margin: 5px;
+    width: 100%;
+    resize: none;
+    color: #000;
+    margin-bottom: 10px;
+    color: #5c5c5c;
+    text-indent: 5px;
+    font-size: 13px;
+}
+
+
+.comment-feed:focus {
+    color: #5c5c5c;
+    background: #FFF;
+    border: 1px solid #ccc;
+}
+
+.div-comment-feed  {
+    display: block;
+    clear: left;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 25px;
+    float: left;
+}
+
+.feed-content {
+
+    padding: 0 11px;
+    line-height: 18px;
+}
+
+.btn-for-popup {
+    width: 100%;
+    padding: 0 17px;
+    margin-top: 10px;
+}
+
+.btn-for-popup > a {
+    margin-right: 7px;
+    padding: 3px 10px;
+    font-size: 11px;
+}
+
+.btn-binhluan {
+    padding: 10px;
+}
+
+#txtComment {
+    float: left;
+    width: 90%;
+    border-radius: 0;
+}
+
+.info-comment {
+    font-size: 12px;
+}
+
+.info-comment .pe-7s-clock:before {
+    margin-left: 19px;
+    margin-top: 1px;
+}
+
+.info-comment .pe-7s-clock {
+    font-size: 14px;
+    font-weight: bold;
+    text-indent: 0px;
+}
+
+.pe-7s-back {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pe-7s-close {
+    color: white
+}
+
+.reply {
+    height: 32px;
+    margin-top: 10px;
+}
+
+.wrap-sub-comment .author {
+    font-size: 16px;
+    display: block;
+}
+
+.wrap-sub-comment {
+    margin-left: 45px;
+    margin-top: 10px;
+    clear: left;
+}
+
+input.txtinput, select {
+    background: #fff;
+}
+
+input.txtinput {
+    border-radius: 0;
+}
+
+.text-background {
+    border-left: none !important;
+}
+
+.btn-comment {
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    height: 32px;
+    line-height: 0;
+    border-radius: 0;
+}
+
+.binh-luan {
+    height: 38px;
+    line-height: 19px;
+    background: green;
+    border-radius: 0;
+}
+
+.subComment {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+span.popup-save-feed {
+    margin-right: 50px;
+}
+
+
+#pick {
+    margin-top: 15px;
+    height: 35px;
+    background: green;
+}
+
+h3.title-popup .pe-7s-clock:before {
+    margin-top: 2px !important;
+}
+
+h3.title-popup > span {
+    margin-left: 10px;
+}
+
+h3.title-popup > span:nth-child(2) {
+    margin-left: 0;
+}
+
+#mainReply {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding-left: 9px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+#mainReply > .btn-comment {
+    top: 0;
+    right: 11px;
+}
+
+.comment-reply {
+    position: relative;
+}
+
+.comment-reply > input.txtinput {
+    width: 87%;
+}
