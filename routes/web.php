@@ -37,3 +37,16 @@ Route::group(['namespace' => 'Fontend'], function() {
 		'uses' => 'HomeController@provision'
 	]);
 });
+
+Route::group(['namespace' => 'Backend'], function() {
+
+	Route::get('/signin', [
+		'as' => 'signin',
+		'uses' => 'HomeController@signin'
+	]);
+
+	Route::get('/signout', [
+		'as' => 'signout',
+		'uses' => 'HomeController@signout'
+	]);
+});
