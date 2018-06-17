@@ -10,7 +10,30 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['namespace' => 'Fontend'], function() {
+	
+	Route::get('/', [
+		'as' => 'index',
+		'uses' => 'HomeController@index'
+	]);
 
-Route::get('/', function () {
-    return view('welcome');
+	Route::get('/about', [
+		'as' => 'about',
+		'uses' => 'HomeController@about'
+	]);
+
+	Route::get('/help_shipper', [
+		'as' => 'help_shipper',
+		'uses' => 'HomeController@helpShipper'
+	]);
+
+	Route::get('/help_shop', [
+		'as' => 'help_shop',
+		'uses' => 'HomeController@help_shop'
+	]);
+
+	Route::get('/provision', [
+		'as' => 'provision',
+		'uses' => 'HomeController@provision'
+	]);
 });

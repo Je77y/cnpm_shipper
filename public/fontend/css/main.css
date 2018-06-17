@@ -213,7 +213,7 @@ section {
     position: absolute;
     width: 100%;
     height: 100px;
-    background-image: url(../img/s1_triangle.svg);
+    /*background-image: url(https://sanship.vn/img/s1_triangle.svg);*/
     background-size: cover;
     background-position: bottom;
     z-index: 3;
@@ -1464,7 +1464,7 @@ header .top-menu {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background: url(../img/dots.png);
+    background: url(../imgs/dots.png);
     z-index: 0
 }
 
@@ -1761,7 +1761,7 @@ header .top-menu {
 .video-popup {
     padding-top: 90px;
     padding-bottom: 83px;
-    background-image: url(../img/bg1.jpg);
+    background-image: url(fontend/imgs/bg1.jpg);
     text-align: center
 }
 
@@ -1914,7 +1914,7 @@ header .top-menu {
 }
 
 .screenshots {
-    background-image: url(../img/bg1.jpg);
+    background-image: url(fontend/imgs/bg1.jpg);
     background-size: cover;
     background-repeat: no-repeat
 }
@@ -2036,7 +2036,7 @@ header .top-menu {
     width: 100%;
     height: 30px;
     position: absolute;
-    background-image: url(../img/s1_triangle1.svg);
+    /*background-image: url(https://sanship.vn/img/s1_triangle.svg);*/
     background-size: contain;
     background-repeat: no-repeat
 }
@@ -2129,7 +2129,7 @@ header .top-menu {
 
 .faq,
 .testimonials {
-    background-image: url(../img/bg.jpg)
+    background-image: url(../imgs/bg.jpg)
 }
 
 .testimonials * {
@@ -2223,7 +2223,7 @@ header .top-menu {
 }
 
 .what-did {
-    background-image: url(../img/pattern.png);
+    background-image: url(../imgs/pattern.png);
     background-color: #f2f2f2
 }
 
@@ -2265,7 +2265,7 @@ header .top-menu {
 }
 
 .downloads {
-    background-image: url(../img/bg.jpg);
+    background-image: url(../imgs/bg.jpg);
     background-position-y: 35%;
     padding-top: 0
 }
@@ -2340,7 +2340,7 @@ header .top-menu {
 }
 
 .form-contact {
-    background-image: url(../img/bg1.jpg)
+    background-image: url(../imgs/bg1.jpg)
 }
 
 footer {
@@ -2390,7 +2390,7 @@ footer .bottom-footer .footer-menu ul li a {
 }
 
 .subscribe {
-    background-image: url(../img/bg.jpg);
+    background-image: url(../imgs/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat
 }
@@ -2398,7 +2398,7 @@ footer .bottom-footer .footer-menu ul li a {
 .contact-page .content-section,
 .faq-page .content-section,
 .terms-page .content-section {
-    background-image: url(../img/hero-bg.png)
+    background-image: url(../imgs/hero-bg.png)
 }
 
 .subscribe .section-class-item {
