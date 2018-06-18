@@ -18,6 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->enum('area', ['HN', 'HCM'])->comment('Ha Noi, Ho Chi Minh');
+            $table->boolean('accuracy')->default(0)->comment('Xac thuc nguoi dung');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -49,4 +49,34 @@ Route::group(['namespace' => 'Backend'], function() {
 		'as' => 'signout',
 		'uses' => 'HomeController@signout'
 	]);
+
+	Route::get('/reset', [
+		'as' => 'reset',
+		'uses' => 'HomeController@sendemail'
+	]);
+
+	Route::group(['prefix' => 'admin'], function() {
+
+		Route::get('/index', [
+			'as' => 'admin.home',
+			'uses' => 'HomeController@index'
+		]);
+
+		Route::get('/save_order', [
+			'as' => 'admin.save_order',
+			'uses' => 'SaveOrderController@index'
+		]);
+
+		Route::get('/shop', [
+			'as' => 'admin.shop',
+			'uses' => 'ShopController@index'
+		]);
+
+		Route::get('/transaction_history', [
+			'as' => 'admin.transaction_history',
+			'uses' => 'TransactionHistoryController@index'
+		]);
+
+	});
+	
 });
