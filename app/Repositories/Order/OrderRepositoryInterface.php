@@ -6,5 +6,9 @@ interface OrderRepositoryInterface
 {
 	public function getAll();
 
-	public function saveOrder($id);
+	public function getListSaveOrder();
+
+	public function filterSaveOrder();
+
+	public function getListActiveOrder();
 }

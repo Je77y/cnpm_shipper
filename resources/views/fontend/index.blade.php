@@ -15,10 +15,10 @@
                         <p data-reactid="54">Tự do đặt giá Ship, không bị ép giá theo quãng đường. Shipper đến lấy hàng sau 5 đến 10 phút và giao hàng tức thời</p>
                       </div>
                     </div>
-                    <div class="buttons-download text-center" data-reactid="331"><a href="{{ route('signout') }}" class="download anim-shadow" data-reactid="332"><i class="fas fa-sign-in-alt"></i><span data-reactid="334"><span data-reactid="335">Đăng ký</span>Tài khoản</span></a>
+                    <div class="buttons-download text-center" data-reactid="331"><a href="{{ route('signout') }}" class="download anim-shadow" data-reactid="332"><i class="fas fa-shopping-cart"></i><span data-reactid="334"><span data-reactid="335">Tài khoản</span>Shop</span></a>
                         <a
-                          href="{{ route('signin') }}" target="_blank" class="download anim-shadow" data-reactid="337"><i class="fas fa-sign-out-alt"></i><span data-reactid="339"><span data-reactid="340">Đăng nhập</span>
-                          Hệ thống
+                          href="{{ route('signin') }}" target="_blank" class="download anim-shadow" data-reactid="337"><i class="fas fa-bicycle"></i><span data-reactid="339"><span data-reactid="340">Tài khoản</span>
+                          Shipper
                           </span>
                           </a>
                       </div>

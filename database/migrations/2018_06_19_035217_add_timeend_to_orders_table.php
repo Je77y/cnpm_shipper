@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUserToOrdersTable extends Migration
+class AddTimeendToOrdersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,8 @@ class AddUserToOrdersTable extends Migration
     public function up()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->integer('created_user')->default(2)->comment('Nguoi tao');
-            $table->integer('receiver')->default(1)->comment('Nguoi nhan');
+            $table->date('transaction_completion')->default(null)->comment("Thoi gian hoan thanh giao dich");
+            $table->boolean('status_transaction')->default(0)->comment("Trang thai giao dich");
         });
     }
 
@@ -27,8 +27,8 @@ class AddUserToOrdersTable extends Migration
     public function down()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->dropColumn('created_user');
-            $table->dropColumn('receiver');
+            $table->dropColumn('transaction_completion');
+            $table->dropColumn('status_transaction');
         });
     }
 }

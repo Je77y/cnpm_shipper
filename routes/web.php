@@ -77,6 +77,27 @@ Route::group(['namespace' => 'Backend'], function() {
 			'uses' => 'TransactionHistoryController@index'
 		]);
 
+		Route::get('/save_order/filter', [
+			'as' => 'admin.save_order.filterSaveOrder',
+			'uses' => 'SaveOrderController@filterSaveOrder'
+		]);
+
+		Route::get('/save_order/remove/{id?}', [
+			'as' => 'admin.save_order.remove',
+			'uses' => 'SaveOrderController@removeSaveOrder'
+		])->where('id', '[0-9]+');
+
+		Route::post('/order/activeOrder/{id?}', [
+			'as' => 'admin.order.active',
+			'uses' => 'OrderController@activeOrder'
+		])->where('id', '[0-9]+');
+
+		Route::get('/save_order/save/{id?}', [
+			'as' => 'admin.save_order.save',
+			'uses' => 'SaveOrderController@saveOrder'
+		])->where('id', '[0-9]+');
+
+
 	});
 	
 });

@@ -8,7 +8,7 @@ class Order extends Model
 {
     protected $table = "orders";
 
-    protected $filltable = [
+    protected $fillable = [
     	'address',
     	'active',
     	'describe',

@@ -22,9 +22,7 @@ class OrderEloquentRepository extends EloquentRepository implements OrderReposit
 	 */
 	public function getAll()
 	{
-		$query = $this->model
-			->select('id', 'address', 'describe', 'created_at', 'updated_at')
-			->where('active', 0);
+		$query = $this->model->where('active', 0);
 		
 		$query->orderBy('created_at', 'desc');
 		$query->orderBy('updated_at', 'desc');
@@ -32,8 +30,32 @@ class OrderEloquentRepository extends EloquentRepository implements OrderReposit
 		return $query->get();
 	}
 
-	public function saveOrder($id)
+	public function getListSaveOrder()
 	{
-		
+		$query = $this->model->where('save_order', 1);
+
+		$query->orderBy('created_at', 'desc');
+
+		return $query->get();
+	}
+
+	public function filterSaveOrder()
+	{
+		$query = $this->model
+			->where('active', 1)
+			->where('save_order', 1)
+			->update(['save_order' => 0]);
+
+		// return $query->where('save_order', 1)->get();
+	}
+
+	public function getListActiveOrder()
+	{
+		$query = $this->model
+			->where('active', 1);
+
+		$query->orderBy('created_at', 'desc');
+
+		return $query->get();
 	}
 }

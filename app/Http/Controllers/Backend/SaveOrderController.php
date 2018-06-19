@@ -4,82 +4,39 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Repositories\Order\OrderRepositoryInterface;
+use App\Models\Order;
 
 class SaveOrderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private $saveOrder;
+
+    public function __construct(OrderRepositoryInterface $saveOrder)
+    {
+        $this->saveOrder = $saveOrder;
+    }
+
     public function index()
     {
-        return view('backend.save_order.index');
+        $lsSaveOrder = $this->saveOrder->getListSaveOrder();
+        return view('backend.save_order.index', compact('lsSaveOrder'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function saveOrder($id)
     {
-        //
+        $this->saveOrder->update($id, array('save_order' => 1));
+        return redirect()->route('admin.home');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function filterSaveOrder()
     {
-        //
+        $this->saveOrder->filterSaveOrder();
+        return redirect()->route('admin.save_order');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function removeSaveOrder($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $this->saveOrder->update($id, array('save_order' => 0));
+        return redirect()->route('admin.save_order');
     }
 }

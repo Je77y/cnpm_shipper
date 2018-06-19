@@ -15,16 +15,16 @@ class OrdersTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        $date = Carbon::now();
+        $current_date = Carbon::now();
 
-        for($i = 0; $i < 100; $i++) {
+        for($i = 0; $i < 500; $i++) {
 	        Order::create([
 	            'address' => $faker->address,
 	            'active' => rand(0,1),
 	            'describe' => $faker->text($maxNbChars = 200),
-	            'save_order' => rand(0,1),
-	            'created_at' => $date,
-	            'updated_at' => $date
+	            'save_order' => 0,
+	            'created_at' => $current_date->subMinute(),
+	            'updated_at' => $current_date->subMinute()
 	        ]);
     		}
 
